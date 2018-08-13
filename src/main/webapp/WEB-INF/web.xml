@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  <servlet-name>addServlet</servlet-name>
+  <servlet-class>addServlet</servlet-class>
+</servlet>
+  <servlet-mapping>
+    <servlet-name>addServlet</servlet-name>
+    <url-pattern>/addServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>deleteServlet</servlet-name>
+    <servlet-class>deleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteServlet</servlet-name>
+    <url-pattern>/deleteServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>updateServlet</servlet-name>
+    <servlet-class>updateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateServlet</servlet-name>
+    <url-pattern>/updateServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>languageServlet</servlet-name>
+    <servlet-class>languageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>languageServlet</servlet-name>
+    <url-pattern>/languageServlet</url-pattern>
+  </servlet-mapping>
+<!--登录拦截器配置-->
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>filter.loginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/addFilm.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/main.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/updateFilm.jsp</url-pattern>
+  </filter-mapping>
+
+
+</web-app>
